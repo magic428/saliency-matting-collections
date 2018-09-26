@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8)
-project(saliency_cut)
+project(salmat)
 
 SET( CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11" )
 SET( CMAKE_BUILD_TYPE Release )
@@ -14,7 +14,7 @@ find_package(OpenCV REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})
 list(APPEND LINKER_LIBS ${OpenCV_LIBS})
 
-#boost filesystem
+# boost filesystem
 find_package(Boost REQUIRED COMPONENTS
 system
 filesystem

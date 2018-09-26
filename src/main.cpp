@@ -45,7 +45,7 @@ void getTrimap(const cv::Mat &sal1f, cv::Mat& trimap, float t1, float t2)
  *      FASA
  *      GMR
 */
-int matting_demo(std::string root_dir, std::string salDir)
+int salmat_demo(std::string root_dir, std::string salDir)
 {
     std::vector<std::string> names; 
     std::vector<std::string> paths; 
@@ -167,7 +167,7 @@ int main(int argc, char* argv[])
     std::cout << "output_dir: " << output_dir << std::endl;
 
     // Saliency detection methods and Matting methods
-    matting_demo(input_dir, output_dir); 
+    salmat_demo(input_dir, output_dir); 
 
     return 0;
 }

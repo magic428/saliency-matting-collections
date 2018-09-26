@@ -1,6 +1,8 @@
 # SaliencyCut and AlphaMatting
 
-(1) SaliencyCut:  
+## 1. Matting 方法
+
+(1) SaliencyCut  
 -----------
 
 根据论文:  
@@ -27,21 +29,35 @@
 
 这个版本的实现中并没有使用 GPU 并行加速, 因此使用这个版本测出的运行时间可能和论文上的有出入.   
 
-## 前端需要提取 Saliency Map
+## 2. Saliency 方法
 
-FASA   
-------------
-Global Contrast Based On Region Contrast  
+(1) FASA   
 ------------
 
-Global Contrast Based On Region Contrast  
+FASA: Fast, Accurate, and Size-Aware Salient Object Detection  
+
+
+(2) Global Contrast Based On Region Contrast  
 ------------
 
-HC   
+Global Contrast based Salient Region Detection. 
+  MM Cheng, NJ Mitra, X Huang, PHS Torr SM Hu. 
+  IEEE CVPR, p. 409-416, 2011. 
+
+(3) GMR   
 ------------
 
+  @inproceedings{yang2013saliency,  
+  title={Saliency detection via graph-based manifold ranking},  
+  author={Yang, Chuan and Zhang, Lihe and Lu, Huchuan, Ruan, Xiang and Yang, Ming-Hsuan},  
+  booktitle={Computer Vision and Pattern Recognition (CVPR), 2013 IEEE Conference on},  
+  pages={3166--3173},  
+  year={2013},  
+  organization={IEEE}  
+  }  
 
-## 编译
+
+## 3. 编译
 
 Requirement   
 ------------
@@ -58,14 +74,11 @@ cmake ..
 make 
 ```
 
-## 代码使用  
+## 4. Example  
 
-其中提供的 main.cpp 中提供了示例代码.   
+```bash
+./salmat /path/to/an/imageDir
+```
 
-
-## 说明  
-
-代码中 include 目录下包含一部分没有使用的 .h 文件, 这是为了后期移植其他的算法预留的. 直接忽略即可.  
-
-
+详细使用方法可参考 main.cpp 中提供的 salmat_demo() 函数.   
 
