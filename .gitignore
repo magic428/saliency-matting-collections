@@ -1,0 +1,20 @@
+# git ignore file
+# windows
+Lib/
+Compiled/
+Debug/
+Release/
+GeneratedFiles/
+ipch/
+x64/
+*.opensdf
+*.sdf
+*.suo
+*.user
+*.pdb
+
+# linux
+build/
+*.o
+*.a
+*.bin
